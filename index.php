@@ -3,7 +3,7 @@
 const API_URL = "https://whenisthenextmcufilm.com/api";
 #Inicializar una nueva sesion de cURL = cURL handle
 $ch = curl_init(API_URL);
-#Indicar que queremos recibir el resultado de la peticion y no mostrarla en patalla
+#Indicar que queremos recibir el resultado de la peticion y no mostrarla en pantalla
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 #Ejecutar la peticon y guardamos el resultado
 $result = curl_exec($ch);
@@ -26,14 +26,14 @@ curl_close($ch);
 <main>
     
     <section>
-        <img src="<?php $data["poster_url"]; ?>" width="500" alt="Poster de <?php $data["title"]; ?>"
+        <img src="<?php echo $data["poster_url"]; ?>" width="500" alt="Poster de <?php $data["title"]; ?>"
         style="border-radius: 16px"/>
     </section>
 
     <hgroup>
-        <h3><?php $data["title"]; ?> Se estrena en <?php $data["days_until"];?> dias</h3>
-        <p>Fecha de estreno: <?php $data["release_date"]; ?></p>
-        <p>La siguiente es: <?php $data["following_production"]["title"];?></p>
+        <h3><?php echo $data["title"]; ?> Se estrena en <?php $data["days_until"];?> dias</h3>
+        <p>Fecha de estreno: <?php echo $data["release_date"]; ?></p>
+        <p>La siguiente es: <?php echo $data["following_production"]["title"];?></p>
     </hgroup>
 
 </main>
