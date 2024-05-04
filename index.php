@@ -26,12 +26,12 @@ curl_close($ch);
 <main>
     
     <section>
-        <img src="<?php echo $data["poster_url"]; ?>" width="500" alt="Poster de <?php $data["title"]; ?>"
+        <img src="<?php echo $data["poster_url"]; ?>" width="500" alt="Poster de <?php echo $data["title"]; ?>"
         style="border-radius: 16px"/>
     </section>
 
     <hgroup>
-        <h3><?php echo $data["title"]; ?> Se estrena en <?php $data["days_until"];?> dias</h3>
+        <h3><?php echo $data["title"]; ?> Se estrena en <?php echo $data["days_until"];?> dias</h3>
         <p>Fecha de estreno: <?php echo $data["release_date"]; ?></p>
         <p>La siguiente es: <?php echo $data["following_production"]["title"];?></p>
     </hgroup>
